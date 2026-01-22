@@ -1,0 +1,76 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- CONTACT HERO -->
+<section id="contact-hero">
+    <div class="overlay">
+        <h2>Contact Himalayan IT College</h2>
+        <p>We are here to help you! Reach out to us anytime.</p>
+    </div>
+</section>
+
+<!-- CONTACT CONTAINER -->
+<section id="contact-container">
+
+    <!-- INFO BOXES -->
+    <div class="contact-info-grid">
+
+        <div class="info-box box">
+            <h3>Headquarters</h3>
+            <p>744 New York Ave,<br>Brooklyn, New York, USA</p>
+        </div>
+
+        <div class="info-box box">
+            <h3>Phone</h3>
+            <p>(+1) 98671 23456</p>
+        </div>
+
+        <div class="info-box box">
+            <h3>Email</h3>
+            <p>info@himalayanitcollege.com</p>
+        </div>
+
+        <div class="info-box box">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form box">
+        <h3>Send a Message</h3>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Your Message" rows="6"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</section>
+
+<!-- MAP -->
+<section id="map" class="box">
+    <iframe
+        src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy">
+    </iframe>
+</section>
+
+{% endblock %}

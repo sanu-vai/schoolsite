@@ -1,0 +1,348 @@
+#about-home
+{
+	background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5,4,46,0.7)), url("img/back1.jpg");
+	width: 100%;
+	height: 60vh;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 40px;
+}
+
+#about-home h2
+{
+	color: #fff;
+	font-size: 2.2rem;
+	letter-spacing: 1px;
+}
+
+#about-container
+{
+	display: flex;
+	align-items: center;
+	padding: 8vw 8vw 2vw 8vw;
+}
+
+#about-container .about-img
+{
+	width: 60%;
+	padding-right: 60px;
+}
+
+#about-container .about-img img
+{
+	width: 100%;
+}
+
+#about-container .about-text
+{
+	width: 40%;
+}
+
+#about-container .about-text h2
+{
+	color: #29303B;
+	padding-bottom: 15px;
+}
+
+#about-container .about-text p
+{
+	color: #686F7A;
+	font-weight: 300;
+}
+
+#about-container .about-text .about-fe
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 30px;
+}
+
+#about-container .about-text .about-fe img
+{
+	width: 50px;
+	background-size: cover;
+	background-position: center;
+	margin-right: 20px;
+}
+
+#about-container .about-text .about-fe .fe-text
+{
+	width: 90%;
+}
+
+#about-container .about-text .about-fe .fe-text h5
+{
+	font-size: 16px;
+	color: #29303B;
+}
+
+
+
+/*------------------- Trust section starts from here ---------------*/
+#trust
+{
+	text-align: center;
+	padding: 8vw;
+}
+
+#trust .trust-img
+{
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#trust .trust-img img
+{
+	width: 90px;
+	height: auto;
+}
+/*------------------- Trust section ends from here ---------------*/
+
+
+
+
+/*------------------------------------------------------------------*/
+/*------------------- Tablet screen starts from here ---------------*/
+/*------------------------------------------------------------------*/
+@media screen and (max-width: 768px)
+{
+	#about-container
+	{
+		padding: 8vw 4vw 2vw 4vw;
+	}
+
+	#about-container .about-img
+	{
+		padding-right: 30px;
+	}
+
+	#trust .trust-img img
+	{
+		width: 50px;
+		height: auto;
+	}
+}
+
+
+/*------------------------------------------------------------------*/
+/*------------------- Smartphone screen starts from here ---------------*/
+/*------------------------------------------------------------------*/
+@media screen and (max-width: 475px)
+{
+	#about-container
+	{
+		flex-direction: column-reverse;
+	}
+
+	#about-container .about-img
+	{
+		width: 100%;
+		padding: 0;
+	}
+
+	#about-container .about-text
+	{
+		width: 100%;
+		padding-bottom: 20px;
+	}
+
+	#trust .trust-img
+	{
+		margin-top: 40px;
+		flex-wrap: wrap;
+	}
+
+	#trust .trust-img img
+	{
+		width: 60px;
+		margin: 10px 15px;
+		height: auto;
+	}
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ABOUT HOME */
+#about-home {
+    min-height: 65vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    text-align: center;
+}
+
+/* FLIP CARD */
+.flip-card {
+    width: 420px;
+    height: 200px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.9s ease;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* CARD SIDES */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+
+/* FRONT */
+.flip-card-front {
+    background: linear-gradient(145deg, #ff512f, #dd2476);
+}
+
+.flip-card-front h2 {
+    color: #fff;
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+/* BACK */
+.flip-card-back {
+    background: linear-gradient(145deg, #141e30, #243b55);
+    transform: rotateY(180deg);
+    color: #fff;
+}
+
+.flip-card-back h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.flip-card-back p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* TAGLINE */
+.about-tagline {
+    margin-top: 25px;
+    color: #eee;
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ABOUT CONTAINER */
+#about-container {
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* ABOUT BOX */
+.about-box {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+}
+
+.about-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.about-text {
+    padding: 25px;
+}
+
+.about-text h3 {
+    margin-bottom: 12px;
+    color: #203a43;
+}
+
+.about-text p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ACHIEVEMENTS */
+#achievements {
+    padding: 80px 10%;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+#achievements h2 {
+    margin-bottom: 40px;
+    color: #203a43;
+}
+
+.achievement-boxes {
+    max-width: 800px;
+    margin: auto;
+}
+
+.achievement {
+    margin-bottom: 20px;
+}
+
+.achievement-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: #203a43;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.achievement-btn.active {
+    background: #dd2476;
+}
+
+.achievement-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background: #fff;
+    padding: 0 20px;
+}
+
+.achievement-content p {
+    padding: 20px 0;
+    font-size: 14px;
+    color: #555;
+}

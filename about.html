@@ -1,0 +1,133 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ABOUT HOME -->
+<section id="about-home">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <!-- FRONT -->
+            <div class="flip-card-front">
+                <h2>Himalayan IT College</h2>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-card-back">
+                <h2>About Us</h2>
+                <p>Empowering Future IT Professionals</p>
+            </div>
+
+        </div>
+    </div>
+
+    <p class="about-tagline">
+        Empowering students with cutting-edge IT skills and hands-on learning experience.
+    </p>
+
+</section>
+
+<!-- ABOUT DETAILS -->
+<section id="about-container">
+
+    <div class="about-box box">
+        <img src="{% static 'img/a1.jpg' %}" alt="">
+        <div class="about-text">
+            <h3>Our Mission</h3>
+            <p>
+                To provide practical IT education and prepare students
+                for real-world technology challenges.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-box box">
+        <img src="{% static 'img/a2.jpg' %}" alt="">
+        <div class="about-text">
+            <h3>Our Vision</h3>
+            <p>
+                To become a leading IT education hub in Asia,
+                nurturing innovation and skilled professionals.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-box box">
+        <img src="{% static 'img/a3.jpg' %}" alt="">
+        <div class="about-text">
+            <h3>Our Community</h3>
+            <p>
+                We foster a collaborative learning environment
+                where students grow and succeed together.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+    <h2>Achievements</h2>
+
+    <div class="achievement-boxes">
+
+        <div class="achievement box">
+            <button class="achievement-btn">500+ Graduates</button>
+            <div class="achievement-content">
+                <p>
+                    Our graduates work in top IT companies worldwide.
+                    We focus on hands-on training and real-world skills.
+                </p>
+            </div>
+        </div>
+
+        <div class="achievement box">
+            <button class="achievement-btn">100+ Projects</button>
+            <div class="achievement-content">
+                <p>
+                    Students complete real-world projects in Web,
+                    Python, AI, Data Science, and Mobile Development.
+                </p>
+            </div>
+        </div>
+
+        <div class="achievement box">
+            <button class="achievement-btn">50+ Industry Partners</button>
+            <div class="achievement-content">
+                <p>
+                    Industry collaborations provide internships,
+                    mentorship, and placement opportunities.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+const buttons = document.querySelectorAll('.achievement-btn');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            btn.classList.remove('active');
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            btn.classList.add('active');
+        }
+    });
+});
+</script>
+
+{% endblock %}
